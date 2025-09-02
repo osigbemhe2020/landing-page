@@ -11,7 +11,7 @@ import { MdPolicy } from "react-icons/md";
 const Button = ({text}) => {
   return (
     <button 
-   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 mt-5 text-lg font-semibold" >
+   className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-3  text-lg font-semibold" >
         {text}  
     </button>
     )
@@ -149,6 +149,7 @@ const Footer = () => {
                     placeholder="Your email address"
                     //value={email}
                     onChange={handleEmailChange}
+                    className="border border-[2px] border-grey h-[50px]"
                     required
                   />
                   <Button text="Subscribe"/>

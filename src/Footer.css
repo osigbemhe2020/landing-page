@@ -99,6 +99,7 @@
 
 .reach-out-box {
   flex-direction: row;
+  align-items: center;
 }
 
 .reach-out input {

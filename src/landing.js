@@ -11,6 +11,7 @@ import { MdShare } from "react-icons/md"
 import { TbTemplateOff } from "react-icons/tb"
 import { TbSeo } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md"
+import logo from './assets/belsoft.png'
 import Footer from './Footer';
 
 /*type OfferProps = {
@@ -63,7 +64,7 @@ export const ReviewCard = ({ clientImage, clientName, review }) => {
 const Button = ({text}) => {
   return (
     <button 
-   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 mt-5 text-[1.1em] font-semibold" >
+   className="bg-blue-900 hover:bg-blue-700 text-white px-8 py-3 mt-5 text-[1.1em] font-semibold" >
         {text}  
     </button>
   )
@@ -104,6 +105,8 @@ const Offer = ({offer,icon}) => {
     </div>
   )
 }
+
+
   
 export default function LandingPage() {
   return (
@@ -111,7 +114,10 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background">
     {/*<NavBar />*/}
       {/* Hero Section */}
+  
       <section className="max-h-[100vh] min-h-[95vh] relative overflow-hidden">
+         
+
         <div
         className="absolute inset-0 bg-sample3 bg-cover bg-center bg-no-repeat"
         style={{
@@ -119,7 +125,16 @@ export default function LandingPage() {
         }}
       ></div>
        <div className="absolute inset-0 bg-black/30"></div>
+       <div className="absolute top-5 left-5 bg-white/80  p-2 rounded-lg shadow-md z-10">
+        <img
+          src={logo} // change to your logo path
+          alt="Logo"
+          className="w-10 h-auto"
+        />
+      </div>
+
         <div className="relative z-10 flex flex-col items-center min-h-[95vh] justify-center py-20 px-4 text-center text-white">
+          
         <div className="max-w-4xl mx-auto">
           <h1
             className="text-4xl md:text-6xl font-bold mb-8 "
