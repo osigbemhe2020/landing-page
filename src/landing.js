@@ -1,11 +1,17 @@
 ///import { Button } from "@/components/ui/Button"
-import { FaCheckCircle } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa";
 import { Clock } from 'lucide-react';
 import client from './assets/avatar.jpeg';
-import graphic from './assets/graphic.png'
-//import NavBar from '../../components/NavBar/NavBar';
-//import Footer from '../../components/Footer/Footer';
+import { AiOutlineSafetyCertificate } from 'react-icons/ai';
+import { FaPeopleArrows } from 'react-icons/fa';
+import { HiOutlineViewGrid } from 'react-icons/hi';
+import { MdDevices } from "react-icons/md"; 
+import { FaRegNewspaper } from "react-icons/fa";
+import { MdOutlineAutoStories } from "react-icons/md";
+import { MdShare } from "react-icons/md"
+import { TbTemplateOff } from "react-icons/tb"
+import { TbSeo } from "react-icons/tb";
+import { MdSecurity } from "react-icons/md"
+import Footer from './Footer';
 
 /*type OfferProps = {
   offer: string;
@@ -57,7 +63,7 @@ export const ReviewCard = ({ clientImage, clientName, review }) => {
 const Button = ({text}) => {
   return (
     <button 
-   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 mt-5 text-lg font-semibold" >
+   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 mt-5 text-[1.1em] font-semibold" >
         {text}  
     </button>
   )
@@ -81,20 +87,18 @@ const Input = ({placeholder}) => {
   return (
     <div>
        <input 
-       className="border border-gray-300 rounded-md p-2  min-w-[400px] w-[80%] mb-4"
+       className="border border-gray-300 rounded-md p-2   w-[80%] mb-4"
        placeholder={placeholder}
        />
     </div>
   )
 }
 
-const Offer = ({offer}) => {
+const Offer = ({offer,icon}) => {
   return (
-    <div className="flex items-start gap-2">
-      <FaCheck 
-      className=" sm:text-2xl text-[1.1em] mr-3"
-      />
-      <p  className="sm:text-[1.3em] text-[1.1em] ">
+    <div className="flex items-center  gap-2">
+      <span  className="text-[1.1em] mr-3">{icon}</span>
+      <p  className=" text-[1.1em] ">
         {offer}
       </p>
     </div>
@@ -150,23 +154,21 @@ export default function LandingPage() {
           </div>
           <div className="flex flex-col md:flex-row gap-10">
             <Box
-            icon= {<Clock 
-      className="text-black"  />}
+            icon= {<AiOutlineSafetyCertificate size={40} className="text-black"/>}
              heading=" Build Instant Credibility"
              content="First impressions matter. A professional, well-designed website instantly
 communicates trust and authority, giving your brand the edge over competitors"
             />
             <Box
             icon= {<Clock 
-      className="text-black"  />}
+      className="text-black" size={40} />}
             heading="24/7 Online Presence"
             content="Your website never closes. It works around the clock, making your business accessible
 to customers anytime and from anywhere in the world."
  
             />
             <Box
-            icon= {<FaCheckCircle 
-      className="text-green-400"  />}
+            icon= {<FaPeopleArrows size={40} className = "text-black"/>}
             heading="Turn Visitors into Customers"
            content="Your website is more than just an online brochure. It guides visitors through your
 products and services, builds trust, and helps convert them into loyal paying
@@ -186,32 +188,40 @@ customers"
              <div className="max-w-[450px] bg-gray-100 rounded-lg text-left px-8 py-4 flex flex-col gap-3">
                <Offer
                offer='5-page Business website'
+               icon={<HiOutlineViewGrid  />}
               />
               <Offer
                offer='Fully functional & responsive'
+               icon = {<MdDevices />}
               />
               <Offer
                offer='Well-written copy, images, and videos that tell the brand story.'
+               icon={ <FaRegNewspaper  />}
               />
               
                <Offer
                offer='Simple menus and clear structure so visitors can quickly find what they need.'
+               icon={<MdOutlineAutoStories  />}
                />
              
              </div>
              <div className=" bg-gray-100 max-w-[450px] rounded-lg text-left px-8 py-4 flex flex-col gap-3">
              <Offer
                offer='Integration with Social Media'
+               icon={ <MdShare />}
               />
               <Offer
                offer='Designed from scratch (no templates)'
+               icon={ <TbTemplateOff  />}
               />
               <Offer
                offer='Built to rank on Google so clients can be discovered easily'
+               icon={<TbSeo/>}
               />
              
               <Offer
                offer='Strong Security (SSL/HTTPS)'
+               icon={<MdSecurity  />}
               />
              </div>
               
@@ -256,7 +266,7 @@ today and let us help you launch with confidence</p>
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-14 px-8 bg-white">
+      <section className="py-14 px-8 bg-white max-w-screen">
         <div className="max-w-5xl mx-auto">
         
             <div id='form' className="w-[80%] mx-auto bg-white p-6 rounded-lg shadow-md text-center">
@@ -266,6 +276,7 @@ today and let us help you launch with confidence</p>
                 placeholder="Name"
                 />
                 <Input 
+
                 placeholder="Email"
                 />
                 <Input 
@@ -284,6 +295,7 @@ today and let us help you launch with confidence</p>
            </div>
       </section>
       {/*<Footer />*/}
+      <Footer/>
     </div>
   )
 }
