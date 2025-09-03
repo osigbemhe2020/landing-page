@@ -1,6 +1,5 @@
 ///import { Button } from "@/components/ui/Button"
 import { Clock } from 'lucide-react';
-import client from './assets/avatar.jpeg';
 import { AiOutlineSafetyCertificate } from 'react-icons/ai';
 import { FaPeopleArrows } from 'react-icons/fa';
 import { HiOutlineViewGrid } from 'react-icons/hi';
@@ -12,6 +11,9 @@ import { TbTemplateOff } from "react-icons/tb"
 import { TbSeo } from "react-icons/tb";
 import { MdSecurity } from "react-icons/md"
 import logo from './assets/belsoft.png'
+import client1 from './assets/client1.jpg'
+import client2 from './assets/client2.jpg'
+import client3 from './assets/ordesea.png'
 import Footer from './Footer';
 
 /*type OfferProps = {
@@ -47,10 +49,10 @@ export const ReviewCard = ({ clientImage, clientName, review }) => {
         <img
           src={clientImage}
           alt={`${clientName}'s profile`}
-          className="w-12 h-12 rounded-full object-cover border-2 border-review-card-border"
+          className="w-12 h-12 rounded-full object-cover border-review-card-border"
         />
         <div>
-          <h3 className="font-semibold text-client-name text-sm">{clientName}</h3>
+          <h3 className="font-semibold text-client-name text-[1.1em]">{clientName}</h3>
           {/*<StarRating rating={rating} size={14} />*/}
         </div>
       </div>
@@ -133,18 +135,18 @@ export default function LandingPage() {
         />
       </div>
 
-        <div className="relative z-10 flex flex-col items-center min-h-[95vh] justify-center py-20 px-4 text-center text-white">
+        <div className="relative z-10 flex flex-col items-center min-h-[95vh] justify-center pt-10 pb-30 px-4 text-center text-white">
           
         <div className="max-w-4xl mx-auto">
           <h1
-            className="text-4xl md:text-6xl font-bold mb-8 "
+            className="text-4xl md:text-6xl font-bold mb-6 "
           >
-            Get a Free, Fully Customized Website for Your Business
+            Get a  Fully Customized Website for Your Business
           </h1>
 
           {/* Subtitle */}
           <p
-            className="text-lg md:text-xl mb-[100px] opacity-90 max-w-3xl mx-auto "
+            className="text-lg md:text-2xl font-semibold mb-[80px] opacity-90 max-w-3xl mx-auto "
           >
             A professional, fully functional 5-page website built from scratch. No templates. No hidden costs.
           </p>
@@ -249,32 +251,32 @@ customers"
       <section className="  py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-foreground mb-4">This Offer Won’t Last”</h1>
-          <p className="text-xl text-muted-foreground">Slots are limited. Once they’re gone, they’re gone. Secure yours
+          <h1 className="sm:text-4xl text-2xl font-bold text-foreground mb-4">This Offer Won’t Last”</h1>
+          <p className="sm:text-xl  text-[18px]  text-muted-foreground">Slots are limited. Once they’re gone, they’re gone. Secure yours
 today and let us help you launch with confidence</p>
+           <a href="#form"><Button
+              text="Apply Now - Limited Slots"
+           /></a>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ReviewCard
-              clientImage= {client}
-              clientName='Phine Glow Hair'
+              clientImage= {client1}
+              clientName='Club Oxbury'
               //rating={review.rating}
-              review='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+              review='The overall service from Belsoft Systems was great. They were responsive...'
             />
             <ReviewCard
-              clientImage= {client}
-              clientName='Phine Glow Hair'
+              clientImage= {client2}
+              clientName='Founders Friday'
               //rating={review.rating}
-              review='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+              review='My team and I look forward to more projects with the Belsoft team and... '
             />
             <ReviewCard
-              clientImage= {client}
-              clientName='Phine Glow Hair'
+              clientImage= {client3}
+              clientName='Ordesea Resources Limited'
               //rating={review.rating}
-              review='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco '
+              review='Working with Belsoft Systems was a pleasure. Their team was attentive... '
             />
         </div>
       </div>
@@ -284,7 +286,7 @@ today and let us help you launch with confidence</p>
       <section className="py-14 px-8 bg-white max-w-screen">
         <div className="max-w-5xl mx-auto">
         
-            <div id='form' className="w-[80%] mx-auto bg-white p-6 rounded-lg shadow-md text-center">
+            <div id='form' className="w-[80%] min-w-[400px] mx-auto bg-white p-6 rounded-lg shadow-md text-center">
                <h3 className="font-semibold text-3xl my-3">Apply and Get a Website</h3>
               <br/>
                 <Input 
@@ -300,11 +302,19 @@ today and let us help you launch with confidence</p>
                 <Input 
                 placeholder="Business Name"
                 />
-                
+                <textarea 
+                placeholder='Social media handles if any'
+                className='border border-gray-300 rounded-md p-2 w-[80%] !h-[100px]  mb-4 resize-none'
+                 
+                >
+              
+
+                </textarea>
+                <br/>
                 <Button
               text="Claim My Free Website"
            /><br/>
-                <i className="text-[0.7em]">* No payment required. just public credit when you launch. *</i>
+                <i className="text-[0.7em]">*  just public credit when you launch. *</i>
                
             </div>
            </div>

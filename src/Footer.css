@@ -1,5 +1,5 @@
 .footer-section {
-  padding: 0;
+  padding: 40px;
   margin-top: 80px;
   /* position: relative; */
 }
@@ -144,7 +144,7 @@
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   /* .footer-content {
         padding: 40px 20px;
     } */
