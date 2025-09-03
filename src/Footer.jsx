@@ -69,23 +69,24 @@ const Footer = () => {
             <ul>
               <li
                 onClick={() =>
-                  (window.location = "mailto:enquiries@belsoftsystems.com")
+                  (window.location = "mailto:marketing@belsoftsystems.com")
                 }
               >
                 <span className="footer-icon">
                   <IoMdMailOpen />
                 </span>
-                <p>enquiry@belsoftsystems.com</p>
+                <p>marketing@belsoftsystems.com</p>
               </li>
               <li>
                 <span className="footer-icon">
                   <MdPhone />
                 </span>
                 <a href="tel:+2348037537986">
-                  <p>+234 803 753 7986,</p>
+                  <p>+234 907 562 8581
+,</p>
                 </a>
                 <a href="tel:+2348093237159">
-                  <p>+234 809 323 7159</p>
+                  <p>+234 812 959 8167</p>
                 </a>
               </li>
               <li>
