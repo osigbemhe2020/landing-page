@@ -286,7 +286,7 @@ today and let us help you launch with confidence</p>
       <section className="py-14 px-8 bg-white max-w-screen">
         <div className="max-w-5xl mx-auto">
         
-            <div id='form' className="w-[80%] min-w-[400px] mx-auto bg-white p-6 rounded-lg shadow-md text-center">
+            <div id='form' className="w-[80%] min-w-[360px] mx-auto bg-white sm:p-6 p-4 rounded-lg shadow-md text-center">
                <h3 className="font-semibold text-3xl my-3">Apply and Get a Website</h3>
               <br/>
                 <Input 
